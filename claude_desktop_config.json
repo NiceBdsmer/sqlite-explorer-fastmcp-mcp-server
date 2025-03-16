@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "sqlite_explorer": {
+      "command": "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python",
+      "args": [
+        "sqlite_explorer.py"
+      ],
+      "env": {
+        "SQLITE_DB_PATH": "/Users/sovereignac/Desktop/testfast/sqlite-explorer-fastmcp-mcp-server/test.db",
+        "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "env": {
+        "PLAYWRIGHT_CHROMIUM_PATH": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1"
+      }
+    }
+  }
+} 

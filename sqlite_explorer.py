@@ -6,7 +6,7 @@ from fastmcp import FastMCP
 
 # Initialize FastMCP server
 mcp = FastMCP("SQLite Explorer",
-    log_level="CRITICAL")
+    log_level="INFO")
 
 # Path to Messages database - must be provided via SQLITE_DB_PATH environment variable
 if 'SQLITE_DB_PATH' not in os.environ:
@@ -162,3 +162,6 @@ def describe_table(table_name: str) -> List[Dict[str, str]]:
             
         except sqlite3.Error as e:
             raise ValueError(f"SQLite error: {str(e)}")
+
+if __name__ == "__main__":
+    mcp.run()
